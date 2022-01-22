@@ -1,0 +1,40 @@
+.opportunity-form {
+    h1 {
+        @include header($fs: $md, $fw: $font-regular, $m: $fm-sm $fm-sm 0)
+    }
+
+    h2 {
+        @include header($fs: $sm, $fw: $font-thin, $m: $fm-sm $fm-sm $fm-lg);
+        
+        .inline-link {
+            text-decoration: underline;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .consent-section {
+        display: flex;
+        align-items: center;
+        margin: $fm-xsm 0 0 $fm-sm;
+
+        .consent {
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+
+    .cta-button {
+        align-self: flex-end;
+    }
+}
+
+.card-success {
+    @include card();
+    padding-top: -100px;
+
+    .bubble-success {
+        @include bubble($dir: right);
+    }
+}

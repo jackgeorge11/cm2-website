@@ -1,0 +1,23 @@
+.radio-button {
+    content: " ";
+    width: 7px;
+    height: 7px;
+    border: 2px solid $primary;
+    border-radius: 1000px;
+    cursor: pointer;
+    margin: 0 $fm-md 0 0;
+    transition: color $trans-short, transform $trans-short;
+
+    &:hover {
+        transform: scale(1.25);
+    }
+
+    &.is--active {
+        background-color: $primary;
+        transform: scale(1.25);
+
+        &:hover {
+            transition: color $trans-short;
+        }
+    }
+}

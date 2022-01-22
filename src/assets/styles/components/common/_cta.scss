@@ -1,0 +1,24 @@
+.cta-button {
+    padding: 5px 10px;
+    background-color: $primary;
+    border: solid transparent 1px;
+    border-radius: 100px;
+    color: white;
+    font-weight: $font-bold;
+    font-size: $sm;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform .15s;
+    width: fit-content;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @include media() {
+        font-size: $xsm;
+    }
+}

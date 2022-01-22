@@ -1,0 +1,44 @@
+.providers {
+    .block {
+        .card-intro {
+            @include card($m: 0 0 0 $fm-xlg, $h1m: 0 0 $fm-sm, $h1s: $lg, $h2s: $sm, $h2m: $fm-md 0);
+
+            .bubble-intro {
+                @include bubble();
+            }
+        }
+
+        .intro-image {
+            @include image(30%, 20%)
+        }
+
+        .card-infographic {
+            @include card($m: 0 0 0 $fm-xlg, $h1m: $fm-md 0, $h1s: $lg, $h2s: $sm, $h2m: $fm-md 0 $fm-sm);
+
+            .bubble-infographic {
+                @include bubble($dir: right);
+            }
+        }
+
+        .infographic-image {
+            @include image($w: 50%, $h: 38%)
+
+        }
+
+        .card-pricing {
+            @include card($m: 0 0 0 $fm-xlg, $h1m: $fm-md 0, $h1s: $lg, $h2s: $sm, $h2m: $fm-sm 0);
+
+            .cta-button {
+                margin-top: $fm-sm
+            }
+
+            .bubble-pricing {
+                @include bubble();
+            }
+        }
+
+        .image-pricing {
+            @include image($w: 40%, $h: 28%)
+        }
+    }
+}

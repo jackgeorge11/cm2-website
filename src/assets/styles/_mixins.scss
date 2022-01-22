@@ -1,0 +1,190 @@
+// FONTS
+@mixin header($fs: $md, $fw: $font-thin, $lh: normal, $m: auto) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    margin: $m;
+
+    @include media() {
+        @if $fs == $lg {
+            font-size: $md;
+            line-height: $lh-md;
+        }
+        @if $fs == $md {
+            font-size: $sm;
+        }
+        @if $fs == $sm {
+            font-size: $xsm;
+        }
+        @if $fs == $xsm {
+            font-size: $xxsm;
+        }
+    }
+}
+
+// LOGO
+@mixin logo($m: 25px 25px 15px 25px, $location: 'header'){
+    width: 100px;
+    max-width: 100px;
+    height: 44px;
+    display: inline-block;
+    margin: $m;
+    position: relative;
+
+    @include media($bp: $screen-md) {
+        width: 75px;
+        max-width: 75px;
+        height: 33px;
+        @if $location == 'header' {
+            margin: 0 0 0 25px;
+        } @else {
+            margin: 25px 0 0 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+// BUTTONS
+
+@mixin button($fs: $sm, $fw: $font-regular, $m: 10px 25px) {
+    @include header($fs: $fs, $fw: $fw, $m: $m);
+    text-decoration: none;
+    color: $dark;
+    transition: $trans-color;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $primary;
+        opacity: 0;
+        transition: $trans-underline;
+        transform: translate3d(-100%, 0, 0);
+        }
+
+    &:hover {
+        color: $primary;
+
+        &::after,
+        &::after {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &.is--active {
+        color: $primary;
+
+        &::after,
+        &::after {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+// CARDS
+
+@mixin card($m: 0, $h1s: $lg, $h1w: $font-thick, $h2s: $sm, $h2w: $font-thin, $h1m: 0 0 $fm-sm, $h2m: $fm-md 0){
+    position: relative;
+    margin: $m;
+    display: flex;
+    flex-direction: column;
+
+    @include media($screen-md) {
+        width: 90%;
+        max-width: 90%;
+        margin: $lg 0;
+    }
+
+    h1 {
+        @include header($fs: $h1s, $fw: $h1w, $m: $h1m, $lh: $lh-lg);
+        text-transform: uppercase;
+    }
+
+    h2 {
+        @include header($fs: $h2s, $fw: $h2w, $m: $h2m);
+    }
+}
+
+@mixin card-widths($width) {
+    .card-#{$width} {
+        width: #{$width}#{'%'};
+        max-width: #{$width}#{'%'};
+    }
+}
+
+$card-widths: 30, 40, 50, 60, 70, 80, 90, 100;
+@each $width in $card-widths {
+    @include card-widths($width)
+}
+
+// BUBBLES
+
+@mixin bubble($bg: $tertiary, $w: 80%, $h: 85%, $dir: left, $t: auto, $l: auto) {
+    background-color: $bg;
+    border-radius: $border-radius;
+    content: " ";
+    position: absolute;
+    @if $dir == left {
+        top: 1.8rem;
+        left: -2vw;
+        width: 80%;
+        height: 85%;
+    } @else if $dir == right {
+        top: -1rem;
+        left: 2vw;
+        width: 80%;
+        height: 100%;
+    } @else {
+        top: $t;
+        left: $l;
+        width: $w;
+        height: $h;
+    }
+    z-index: -1;
+}
+
+// IMAGES
+
+@mixin image($w: 50%, $h: 50%, $custom: false) {
+    position: relative;
+    width: $w;
+    height: auto;
+    // padding-bottom: $h;
+
+    @include media($screen-md) {
+        @if $custom == true {
+            width: $w;
+            padding-bottom: $h;
+        } @else {
+            width: 60%;
+            padding-bottom: 40%;
+        }
+    }
+}
+
+// RESPONSIVENESS
+
+@mixin media($bp: $screen-sm) {
+    @if $bp == $screen-md {
+        @media (max-width: $screen-md) {
+            @content;
+        }
+    } @else {
+        @media (max-width: $screen-sm) {
+            @content
+        }
+    }
+}

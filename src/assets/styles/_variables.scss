@@ -1,0 +1,66 @@
+// COLORS
+$primary: #f99633;
+$secondary: #de5420;
+$tertiary: #ffefe1;
+$quaternary: rgb(255, 249, 242);
+
+$dark: #000000;
+$light: #ffffff;
+$shadow:rgb(233, 233, 233);
+
+// FONTS
+
+    // FAMILIES
+
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    $archivo-narrow: 'Archivo Narrow', sans-serif;
+    $manrope: 'Manrope', sans-serif;
+    $noto-sans: 'Noto Sans', sans-serif;
+
+    $font-primary: $manrope;
+
+    // SIZES
+
+    $xlg: 4rem;
+    $lg: 3rem;
+    $md: 2rem;
+    $sm: 1.1rem;
+    $xsm: .9rem;
+    $xxsm: .75rem;
+
+    // WEIGHTS
+
+    $font-thin: 300;
+    $font-regular: 400;
+    $font-thick: 500;
+    $font-bold: 600;
+
+    // LINE HEIGHTS
+    $lh-lg: 3.5rem;
+    $lh-md: 2.3rem;
+
+    
+    // FONT-MARGINS
+    $fm-xlg: 2rem;
+    $fm-lg: 1.4rem;
+    $fm-md: .875rem;
+    $fm-sm: .4rem;
+    $fm-xsm: .25rem;
+
+// TRANSITIONS
+$trans-short: .15s;
+$trans-long: .3s;
+
+
+$trans-color: color $trans-short ease-out;
+$trans-underline: opacity $trans-short, transform $trans-short;
+
+// BORDERS
+$input-border: 2px solid $primary;;
+$border-radius: 35px;
+$box-shadow: $tertiary 0px 0px 20px;
+
+// BREAKPOINTS
+$screen-md: 1000px;
+$screen-sm: 500px;

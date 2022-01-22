@@ -1,0 +1,148 @@
+.header-umbrella {
+    width: 100%;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+
+    .scroll-line {
+        z-index: -1;
+        position: relative;
+        top: -13px;
+        opacity: 1;
+        transition: opacity $trans-short;
+
+        &.hidden {
+            opacity: 0;
+        }
+
+        svg {
+            min-width: 100%;
+            max-width: 100%;
+
+            line {
+                stroke: $primary;
+                stroke-width: 6px;
+            }
+    
+            circle {
+                r: .75px;
+                stroke: $secondary;
+                stroke-width: .25px;
+                fill: white;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    &.scrolled {
+        background-color: $tertiary;
+    }
+
+    @include media() {
+        height: 70px;
+    }
+
+    .logo-link-wrapper {
+        @include logo($m: 0 0 0 50px);
+    }
+
+    .main-nav {
+        margin-right: 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    
+        .dropdown {
+            display: inline-flex;
+            justify-content: flex-end;
+
+            .main-nav-item {
+                background-color: white;
+
+                @include button;
+                @include media($bp: $screen-md) {
+                    display: none;
+                }
+            }
+
+            .dropdown-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                position: absolute;
+                height: auto;
+                max-height: 0px;
+                overflow: hidden;
+                transition: all $trans-long;
+                background-color: $light;
+                border-radius: 0 0 $border-radius $border-radius;
+                width: fit-content;
+                opacity: 0;
+                justify-self: flex-end;
+                top: calc(1.1rem + 10px + 10px);
+                padding-top: $fm-sm;
+
+                .dropdown-nav-item {
+                    @extend .main-nav-item;
+                    font-size: $xsm;
+                    width: fit-content;
+                    margin: 3px 25px;
+                }
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    max-height: 1000px;
+                    padding-bottom: 10px;
+                    opacity: 1;
+                }
+            }
+        }
+        .hamburger {
+            display: none;
+            z-index: 1000;
+            @include media($bp: $screen-md) {
+                display: block;
+            }
+        }
+    }
+}
+
+.expanded-nav {
+    position: sticky;
+    width: 100%;
+    // top: 130px;
+    z-index: 1000;
+    max-height: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: $light;
+    transition: max-height $trans-long;
+
+    &.is--active {
+        max-height: 500px;
+    }
+
+    @include media($bp: $screen-md) {
+        display: flex;
+    }
+
+    .expanded-nav-item {
+        @include button;
+    }
+}

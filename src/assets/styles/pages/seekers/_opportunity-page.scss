@@ -1,0 +1,29 @@
+.opportunity-page {
+    .block {
+        margin-bottom: 3.5rem;
+
+        .card-intro {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+            }
+        }
+
+        .intro-image {
+            position: relative;
+            width: 30%;
+        }
+
+        .card-description {
+            @include card($h1m: $fm-sm 0, $h1s: $md, $h2s: $sm, $h2m: $fm-xsm);
+            .cta-button {
+                margin-top: $fm-lg;
+            }
+
+            .bubble-description {
+                @include bubble($dir: custom, $h: 100%, $t: 2rem, $l: -2vw);
+            }
+        }
+    }
+}

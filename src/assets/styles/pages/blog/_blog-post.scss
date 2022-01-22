@@ -1,0 +1,27 @@
+.blog-post {
+    .block {
+        .card-intro {
+            @include card($h2m: $fm-sm 0 0);
+
+            .bubble-intro {
+                @include bubble;
+            }
+        }
+
+        .image-intro {
+            @include image($w: 30%, $h: 23%)
+        }
+
+        .card-description {
+            @include card($h1m: $fm-sm 0, $h1s: $md, $h2s: $sm, $h2m: $fm-xsm);
+
+            .image-description {
+                @include image($w: 70%, $h: 40%);
+            }
+
+            .bubble-description {
+                @include bubble($dir: custom, $h: 100%, $t: 2rem, $l: -2vw);
+            }
+        }
+    }
+}

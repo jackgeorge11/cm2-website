@@ -1,0 +1,131 @@
+.seekers {
+    .block{
+        .card-intro {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+            }
+        }
+
+        .intro-image {
+            @include image($w: 30%, $h: 23%);
+        }
+
+        .card-demo {
+            @include card();
+
+            h2 {
+                margin: 5px 0;
+                width: fit-content;
+                cursor: pointer;
+
+                span {
+                    margin-right: 10px;
+                    text-decoration: none;
+
+                    &.inliner {
+                        text-decoration: underline;
+                        margin: 0 !important;
+                        display: inline;
+                        transition: $trans-color;
+
+                        &:hover {
+                            color: $primary;
+                        }
+
+                        &.is--active {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+
+            .bubble-demo {
+                @include bubble($dir: right);
+            }
+        }
+
+        .carousel-demo {
+            width: 60%;
+            height: 40vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include media($bp: $screen-md) {
+                width: 80%;
+                margin: $lg 0;
+            }
+
+            .carousel-demo-image-wrapper {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                opacity: 0;
+                transition: opacity $trans-long ease-out;
+                // overflow: hidden;
+
+                &.is--active {
+                    opacity: 1;
+                    transition: opacity $trans-long $trans-long ease-in;
+                }
+
+                .carousel-demo-image {
+                    @include image($w: 90%, $h: 70%, $custom: true)
+                }
+            }
+
+            .dots {
+                display: flex;
+                position: absolute;
+                bottom: -25px;
+
+                @include media($bp: $screen-md) {
+                    bottom: -90px;
+                }
+
+                .dot {
+                    content: " ";
+                    background-color: white;
+                    border: 1px solid $primary;
+                    transition: all $trans-long;
+                    width: 10px;
+                    height: 10px;
+                    margin: 10px;
+                    border-radius: 1000px;
+                    cursor: pointer;
+
+                    &:hover, &.is--active {
+                        background-color: $primary;
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+
+        .card-browse-opportunities {
+            @include card();
+
+            .bubble-browse-opportunities {
+                @include bubble();
+            }
+        }
+
+        .opportunity-browser {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            @include media($bp: $screen-md) {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

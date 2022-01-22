@@ -1,0 +1,15 @@
+.sky-form {
+    .block {
+        form {
+            .role-type {
+                margin-left: $fm-sm;
+                display: flex;
+                align-items: center;
+
+               label {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

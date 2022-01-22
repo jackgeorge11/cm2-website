@@ -1,0 +1,136 @@
+.register {
+    .block {
+        margin-bottom: 3.5rem;
+        .card-intro {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+
+            }
+        }
+
+        .intro-image {
+            @include image(30%, 20%)
+        }
+
+        .register-form {
+
+            .prices {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                margin: $fm-md 0;
+
+                .price {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    border: 4px solid transparent;
+                    border-radius: $border-radius;
+                    // cursor: pointer;
+                    border-right: none;
+                    border-bottom: none;
+                    opacity: .3;
+
+                    &.is--active {
+                        border-color: $primary;
+                        opacity: 1;
+                    }
+
+                    .image-price {
+                        @include image($w: 50%, $h: 50%);
+                        // cursor: pointer;
+                        transition: transform $trans-short;
+
+                        // &:hover {
+                        //     transform: scale(1.1);
+                        // }
+                    }
+
+                    .price-button {
+                        content: " ";
+                        width: 10px;
+                        height: 10px;
+                        border: 3px solid $primary;
+                        border-radius: 1000px;
+                        // cursor: pointer;
+                        margin: $fm-md;
+                        transition: color $trans-short, transform $trans-short;
+
+                        // &:hover {
+                        //     transform: scale(1.25);
+                        // }
+
+                        &.is--active {
+                            background-color: $primary;
+                            transform: scale(1.25);
+
+                            // &:hover {
+                            //     transition: color $trans-short;
+                            // }
+                        }
+                    }
+
+                    h2 {
+                        @extend .inline-link;
+                        margin: $fm-sm 0 !important;
+                        cursor: auto;
+
+                        &.is--active {
+                            text-decoration: underline;
+                            color: $primary;
+                        }
+                    }
+
+                    .price-feature {
+                        display: flex;
+                        align-self: flex-start;
+                        align-items: center;
+                        font-size: $xsm;
+                        margin: 5px 0;
+
+                        span {
+                            margin:  5px 10px;
+                            // align-self: flex-start;
+                            color: $secondary;
+                            font-size: calc($xsm * 1.75);
+                            line-height: $xsm;
+
+                            &.orange {
+                                color: $primary;
+                                font-size: calc($xsm * 1.1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .consent-section {
+                display: flex;
+                align-items: center;
+                margin-top: $fm-xsm;
+        
+                .consent {
+                    margin: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .cta-button {
+                margin: $fm-sm;
+                align-self: flex-end;
+            }
+        }
+
+        .card-success {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+
+            }
+        }
+    }
+}

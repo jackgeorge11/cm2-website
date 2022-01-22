@@ -1,0 +1,21 @@
+.featured-opportunities {
+    .block {
+        .card-intro {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+            }
+        }
+
+        .intro-image {
+            @include image($w: 30%, $h: 22%);
+        }
+
+        &.featured-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    }
+}

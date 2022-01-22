@@ -1,0 +1,24 @@
+.featured {
+    background-color: $tertiary;
+    max-width: 400px;
+    position: fixed;
+    margin: 10px;
+    bottom: 0;
+    right: 0;
+    // border: 3px solid $secondary;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgb(173, 173, 173);
+
+    .featured-title {
+        @include header($fs: $sm, $fw: $font-thick, $m: 10px);
+    }
+
+    .featured-description {
+        @include header($fs: $xsm, $fw: $font-regular, $m: 10px);
+    }
+
+    .cta-button {
+        margin: 10px;
+        font-size: $xsm;
+    }
+}

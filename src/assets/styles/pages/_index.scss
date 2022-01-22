@@ -1,0 +1,85 @@
+.home {
+    .block {
+        .card-intro {
+            @include card();
+
+            .bubble-intro {
+                @include bubble();
+            }
+
+            .cta-button {
+                margin-bottom: $fm-sm;
+            }
+        }
+
+        .image-intro {
+            @include image($w: 50%, $h: 37%);
+        }
+
+        .card-seekers {
+            @include card();
+
+            ul {
+                @include header($fs: $sm, $fw: $font-thin, $m: 0 0 1rem 0);
+            }
+
+            .bubble-seeker {
+                @include bubble($dir: right);
+            }
+        }
+
+        .image-seekers {
+            @include image($w: 30%, $h: 25%);
+        }
+
+        .card-providers {
+            @include card();
+
+            ul {
+                @include header($fs: $sm, $fw: $font-thin, $m: 0 0 1rem 0);
+            }
+
+            .bubble-provider {
+                @include bubble();
+            }
+        }
+
+        .image-providers {
+            @include image($w: 30%, $h: 30%);
+        }
+
+        .card-opportunity {
+            @include card($h1m: 0, $h2m: 0 0 $fm-md 0);
+
+            h2 {
+                &.is-bold {
+                    font-weight: $font-regular;
+                }
+            }
+
+            .bubble-opportunity {
+                @include bubble();
+            }
+        }
+
+        .image-opportunity {
+            @include image($w: 30%, $h: 25%);
+        }
+
+        .card-trust {
+            @include card($m: 0 0 0 $fm-xlg, $h1s: $lg, $h2s: $sm, $h2m: 0 0 1rem, $h1m: $fm-lg 0);
+
+            .bubble-trust {
+                @include bubble();
+            }
+        }
+
+        .card-blog {
+            @include card($m: 0 0 0 $fm-xlg, $h1s: $lg, $h2s: $sm, $h2m: 0 0 1rem, $h1m: $fm-lg 0);
+
+            .bubble-blog {
+                @include bubble();
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    color: $dark;
+    margin: 0;
+}
+
+.bold {
+    font-weight: $font-thick !important;
+}
+
+.block {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 7rem;
+
+    &.less-margin {
+        margin-bottom: 2rem;
+    }
+
+    @include media($screen-md) {
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        &.rev {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include media() {
+        margin-bottom: 1.5rem;
+
+        &.less-margin {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .block-half {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include media($screen-md) {
+            width: 100%;
+
+            &.rev {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+.attribution {
+    position: absolute;
+    top: 90%;
+    text-decoration: none;
+    color: $shadow;
+    font-size: 15px;
+    transition: $trans-color;
+
+    &:hover {
+        color: rgb(211, 211, 211);
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+// img {
+//     position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;
+// }
+
+.hover-link {
+    font-weight: $font-thick;
+    color: inherit;
+    transition: $trans-color;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.gatsby-image-wrapper {
+    div {
+      max-width: none !important;
+    }
+  }

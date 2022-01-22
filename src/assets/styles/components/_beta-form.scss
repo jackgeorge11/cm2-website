@@ -1,0 +1,49 @@
+.seeker-sign-up {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    h2, p {
+        &.shrunk {
+            max-width: 75%;
+            font-size: $xxsm !important;
+            margin: $fm-md 0 0 !important;
+        }
+        &.consent {
+            margin: 0 !important;
+            cursor: pointer;
+            font-size: $xxsm !important;
+            opacity: .65;
+            transition: opacity $trans-short;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .beta-form {
+
+        .form-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: $fm-sm;
+
+            input {
+                width: 50%;
+                margin: 0 $fm-xsm 0 0;
+
+                &.shrunk {
+                    font-size: $xsm;
+                    padding: $fm-xsm;
+                }
+            }
+
+            .cta-button {
+                font-size: $xsm;
+            }
+
+        }
+    }
+}

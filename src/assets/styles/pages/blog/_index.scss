@@ -1,0 +1,38 @@
+.blog {
+  .card-intro {
+    @include card();
+
+    .bubble-intro {
+      @include bubble();
+    }
+  }
+
+  .image-intro {
+    @include image($w: 25%, $h: 20%);
+  }
+
+  .posts {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card-blog-post {
+      @include card($h2m: $fm-sm 0 0);
+      margin-right: -3%;
+
+      a {
+        font-size: $md;
+      }
+
+      .image-blog-post {
+        @include image($w: 90%, $h: 60%);
+        align-self: center;
+      }
+
+      .bubble-blog-post {
+        @include bubble();
+      }
+    }
+  }
+}

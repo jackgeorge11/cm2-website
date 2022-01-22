@@ -1,0 +1,7 @@
+.inline-link {
+    @include button($fw: $font-thick, $m: 0 0 0 8px);
+    display: inline-block;
+    margin: 0 0 -8px 0;
+    cursor: pointer;
+    overflow: hidden;
+}

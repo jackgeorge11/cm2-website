@@ -1,0 +1,41 @@
+.blog-contribute {
+  .block {
+    .card-intro {
+      @include card;
+
+      .bubble-intro {
+        @include bubble;
+      }
+    }
+
+    .image-intro {
+      @include image($w: 20%, $h: 15%);
+    }
+
+    .contribute-form {
+      .consent-section {
+        display: flex;
+        align-items: center;
+        margin-top: $fm-xsm;
+
+        .consent {
+          margin: 0;
+          cursor: pointer;
+        }
+      }
+
+      .cta-button {
+        margin: $fm-sm;
+        align-self: flex-end;
+      }
+    }
+
+    .card-success {
+      @include card();
+
+      .bubble-intro {
+        @include bubble();
+      }
+    }
+  }
+}

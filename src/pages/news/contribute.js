@@ -69,7 +69,7 @@ function Contribute() {
   return (
     <>
       <Helmet>
-        <title>CM2: Become a Blogger</title>
+        <title>CM2: Become a Journalist</title>
         <meta
           name="description"
           content="ConnecMe2 is a mobile app and SaaS-based product for those seeking and providing opportunities. We are a community of like-minded driven professionals aiming to help young, driven individuals achieve their career goals and top brands recruit and connect to top talent."
@@ -77,18 +77,26 @@ function Contribute() {
         <link rel="icon" href="/icons/favicon.ico" />
         <script src="https://smtpjs.com/v3/smtp.js"></script>
       </Helmet>
-      <PageWrapper page="blog">
+      <PageWrapper page="news">
         <div className="blog-contribute">
           <div className="block">
-            <div className="card-intro card-50">
-              <h1>Want to blog for ConnecMe2?</h1>
+            <div className="card card-40">
+              <h1>Want to write for ConnecMe2?</h1>
+              <h2>
+                At ConnecMe2 we are always looking for talented writers
+                interested in helping our community achieve their professional
+                goals. Whether it's a series of informative interviews with
+                industry leaders, positive tips on staying motivated, or even an
+                update on some of the ConnecMe2's latest partners, join or team
+                of freelance journalists!
+              </h2>
               <h2>
                 Fill out the form below, and you'll be on your way to becoming a
-                ConnecMe2 blogger!
+                ConnecMe2 journalist!
               </h2>
-              <div className="bubble-intro" />
+              <div className="bubble" />
             </div>
-            <div className="image-intro">
+            <div className="image-40">
               <StaticImage src="../../images/blog.png" alt="App Mock" />
             </div>
           </div>

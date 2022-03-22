@@ -1,94 +1,117 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: $font-primary;
-    color: $dark;
-    margin: 0;
+  font-family: $font-primary;
+  color: $dark;
+  margin: 0;
 }
 
 .bold {
-    font-weight: $font-thick !important;
+  font-weight: $font-thick !important;
 }
 
 .block {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 7rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 7rem;
 
-    &.less-margin {
-        margin-bottom: 2rem;
-    }
+  &.less-margin {
+    margin-bottom: 2rem;
+  }
+
+  &.rev {
+    flex-direction: row-reverse;
 
     @include media($screen-md) {
-        flex-direction: column;
-        margin-bottom: 3rem;
-
-        &.rev {
-            flex-direction: column-reverse;
-        }
+      flex-direction: column;
+      margin-bottom: 3rem;
     }
+  }
 
-    @include media() {
-        margin-bottom: 1.5rem;
+  @include media($screen-md) {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
 
-        &.less-margin {
-            margin-bottom: 1rem;
-        }
+  @include media() {
+    margin-bottom: 1.5rem;
+
+    &.less-margin {
+      margin-bottom: 1rem;
     }
+  }
 
-    .block-half {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
+  .block-half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 
-        @include media($screen-md) {
-            width: 100%;
+    @include media($screen-md) {
+      width: 100%;
 
-            &.rev {
-                flex-direction: column-reverse;
-            }
-        }
+      &.rev {
+        flex-direction: column-reverse;
+      }
     }
+  }
+}
+
+.card {
+  @include card;
+
+  .bubble {
+    @include bubble;
+  }
+}
+
+$card-widths: 30, 40, 50, 60, 70, 80, 90, 100;
+@each $width in $card-widths {
+  @include card-widths($width);
+  @include image-widths($width);
 }
 
 .attribution {
-    position: absolute;
-    top: 90%;
-    text-decoration: none;
-    color: $shadow;
-    font-size: 15px;
-    transition: $trans-color;
+  position: absolute;
+  top: 90%;
+  text-decoration: none;
+  color: $shadow;
+  font-size: 15px;
+  transition: $trans-color;
 
-    &:hover {
-        color: rgb(211, 211, 211);
-    }
+  &:hover {
+    color: rgb(211, 211, 211);
+  }
 
-    &.hide {
-        display: none;
-    }
+  &.hide {
+    display: none;
+  }
 }
 
-// img {
-//     position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;
-// }
-
 .hover-link {
-    font-weight: $font-thick;
-    color: inherit;
-    transition: $trans-color;
+  font-weight: $font-thick;
+  color: inherit;
+  transition: $trans-color;
 
-    &:hover {
-        color: $primary;
-    }
+  &:hover {
+    color: $primary;
+  }
 }
 
 .gatsby-image-wrapper {
-    div {
-      max-width: none !important;
-    }
+  div {
+    max-width: none !important;
   }
+}
+
+.d-flex {
+  display: flex;
+
+  .cta-button {
+    margin-right: $fm-sm ;
+  }
+}

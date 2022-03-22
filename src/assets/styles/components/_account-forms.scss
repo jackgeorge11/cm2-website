@@ -1,0 +1,186 @@
+.account-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include media($bp: $screen-md) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: calc(45% - #{$fm-md * 4});
+    max-width: 30rem;
+    padding: $fm-md;
+    margin: $fm-md;
+    display: flex;
+    flex-direction: column;
+    border: $secondary solid 1.5px;
+    border-radius: 5px;
+
+    @include media($bp: $screen-md) {
+      width: calc(75% - #{$fm-md * 4});
+      max-width: 30rem;
+    }
+
+    @include media() {
+      width: calc(95% - #{$fm-md * 4});
+      max-width: 30rem;
+    }
+
+    h1 {
+      font-size: $md;
+      font-weight: $font-thick;
+      margin: $fm-sm 0 $fm-xlg;
+    }
+
+    form {
+      width: 100%;
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        box-sizing: border-box;
+        margin: $fm-sm 0 $fm-md;
+        border-radius: 5px;
+        border-color: $secondary;
+        padding: $fm-sm;
+      }
+
+      textarea {
+        min-height: 5rem;
+      }
+
+      label {
+        margin: $fm-xsm 0;
+      }
+
+      .agree,
+      .interest {
+        display: flex;
+        margin: $fm-sm 0;
+
+        input {
+          display: inline;
+          width: auto;
+          margin: $fm-xxsm 0 0;
+        }
+
+        label {
+          font-size: $xxsm;
+          margin: 0 $fm-xsm;
+        }
+      }
+
+      .interests {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 0 $fm-md;
+        max-height: 10rem;
+        overflow-y: scroll;
+
+        .interest {
+          width: 45%;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: $sm;
+        color: white;
+        background-color: $primary;
+        padding: $fm-md;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        margin: $fm-md 0;
+        transition: all $trans-short;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+    }
+
+    .download-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      .btn {
+        width: 5rem;
+      }
+    }
+
+    .perks {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .perk {
+        display: flex;
+        width: 80%;
+        align-items: center;
+
+        .circle {
+          border-radius: 1000px;
+          background-color: $primary;
+          min-width: 4rem;
+          min-height: 4rem;
+          max-width: 4rem;
+          max-height: 4rem;
+          content: " ";
+          margin: 0 $fm-md;
+        }
+
+        &.rev {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    h3 {
+      font-size: $sm;
+      font-weight: $font-regular;
+    }
+
+    h5 {
+      font-size: $xxsm;
+      font-weight: $font-regular;
+      margin: 0;
+    }
+    .image-wrapper {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: " ";
+        z-index: 100;
+        min-width: 100%;
+        min-height: 100rem;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      h3 {
+        position: absolute;
+        color: white;
+        z-index: 1000;
+        font-weight: $font-regular;
+        width: 75%;
+      }
+    }
+  }
+}

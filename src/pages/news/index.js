@@ -5,12 +5,13 @@ import _Image from "../../assets/components/common/_Image";
 import { Link } from "gatsby";
 import Cta from "../../assets/components/common/Cta";
 import blogPosts from "../../assets/components/__BlogSeeds";
+import { StaticImage } from "gatsby-plugin-image";
 
 function index() {
   return (
     <>
       <Helmet>
-        <title>CM2: Blog</title>
+        <title>CM2: News</title>
         <meta
           name="description"
           content="ConnecMe2's blog is a fantastic place to learn about different careers and industries, the application process, motivation and work ethic, and everything else that will help you succeed in your professional and life goals."
@@ -21,8 +22,8 @@ function index() {
       <PageWrapper page="blog">
         <div className="blog">
           <div className="block">
-            <div className="card-intro card-50">
-              <h1>ConnecMe2 Blog</h1>
+            <div className="card card-40">
+              <h1>ConnecMe2 News</h1>
               <h2>
                 Tips, tricks and advice for all your personal and professional
                 goals, written by{" "}
@@ -31,13 +32,16 @@ function index() {
                 </Link>{" "}
                 from the ConnecMe2 community.
               </h2>
+              <h2>
+                Plus, discover information regarding all of ConnecMe2's updates and milestones!
+              </h2>
               <h2>Interested in blogging with ConnecMe2?</h2>
-              <Cta href="/blog/contribute">contribute</Cta>
-              <div className="bubble-intro" />
+              <Cta href="/news/contribute">contribute</Cta>
+              <div className="bubble"/>
             </div>
-            <_Image
-              src="/images/people-blog.png"
-              className="image-intro"
+            <StaticImage
+              src="../../images/people-blog.png"
+              className="image-40"
               hide={true}
             />
           </div>
@@ -67,7 +71,7 @@ function index() {
                   );
                 })
               ) : (
-                <h1>There are no blog posts yet</h1>
+                <h1>There are no articles yet</h1>
               )}
             </div>
           </div>

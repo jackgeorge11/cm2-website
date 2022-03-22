@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import Cta from "./common/Cta";
 
 export default function Header({ page, scroll }) {
   const [isHamburgerActive, setHamburgerActive] = useState(false);
@@ -18,6 +19,74 @@ export default function Header({ page, scroll }) {
           <StaticImage src="../../images/logo.png" alt="ConnecMe2 Logo" />
         </Link>
         <div className="main-nav">
+          <div className="nav-left">
+            <div className="dropdown">
+              <Link
+                href="/providers"
+                className={`main-nav-item ${
+                  page === "providers" && "is--active"
+                }`}
+              >
+                PROVIDERS
+              </Link>
+            </div>
+            <div className="dropdown">
+              <Link
+                href="/seekers"
+                className={`main-nav-item ${
+                  page === "seekers" && "is--active"
+                }`}
+              >
+                SEEKERS
+              </Link>
+            </div>
+            {/* <div className="dropdown">
+              <Link
+                href="/news"
+                className={`main-nav-item ${page === "news" && "is--active"}`}
+              >
+                NEWS
+              </Link>
+            </div> */}
+            <div className="dropdown">
+              <Link
+                href="/about"
+                className={`main-nav-item ${page === "about" && "is--active"}`}
+              >
+                ABOUT
+              </Link>
+            </div>
+            {/* <div className="dropdown">
+              <a
+                href="https://cm2.co.uk"
+                target="_blank"
+                rel="noreferrer"
+                className="main-nav-item"
+              >
+                CM2 TRUST
+              </a>
+            </div> */}
+          </div>
+          <div className="nav-right">
+            <div className="dropdown">
+              <a
+                href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="main-nav-item"
+              >
+                SIGN IN
+              </a>
+            </div>
+            <div className="dropdown">
+              <Cta
+                href="/providers/create-account"
+                className={`${page === "blog" && "is--active"}`}
+              >
+                Create account
+              </Cta>
+            </div>
+          </div>
           <button
             className={`hamburger hamburger--spin ${
               isHamburgerActive && "is-active"
@@ -29,104 +98,9 @@ export default function Header({ page, scroll }) {
               <span className="hamburger-inner"></span>
             </span>
           </button>
-
-          <div className="dropdown">
-            <Link
-              href="/seekers"
-              className={`main-nav-item ${page === "seekers" && "is--active"}`}
-            >
-              SEEKERS
-            </Link>
-            <div className="dropdown-menu seekers">
-              <Link href="/seekers#our-app" className="dropdown-nav-item">
-                Our App
-              </Link>
-              <Link
-                href="/seekers/featured-opportunities"
-                className="dropdown-nav-item"
-              >
-                Featured Opportunities
-              </Link>
-            </div>
-          </div>
-          <div className="dropdown">
-            <Link
-              href="/providers"
-              className={`main-nav-item ${
-                page === "providers" && "is--active"
-              }`}
-            >
-              PROVIDERS
-            </Link>
-            <div className="dropdown-menu providers">
-              <Link href="/providers/register" className="dropdown-nav-item">
-                Register
-              </Link>
-              <Link
-                href="/providers#how-it-works"
-                className="dropdown-nav-item"
-              >
-                How it works
-              </Link>
-            </div>
-          </div>
-          <div className="dropdown">
-            <Link
-              href="/blog"
-              className={`main-nav-item ${page === "blog" && "is--active"}`}
-            >
-              BLOG
-            </Link>
-            <div className="dropdown-menu providers">
-              <Link href="/blog#recent-stories" className="dropdown-nav-item">
-                Recent Stories
-              </Link>
-              <Link href="/blog/contribute" className="dropdown-nav-item">
-                Contribute
-              </Link>
-            </div>
-          </div>
-          <div className="dropdown">
-            <Link
-              href="/trust"
-              className={`main-nav-item ${page === "trust" && "is--active"}`}
-            >
-              CM2 TRUST
-            </Link>
-            <div className="dropdown-menu trust">
-              <Link href="/trust#our-projects" className="dropdown-nav-item">
-                Our Projects
-              </Link>
-              <Link href="/trust#get-in-touch" className="dropdown-nav-item">
-                Get in Touch
-              </Link>
-            </div>
-          </div>
-          <div className="dropdown">
-            <Link
-              href="/about"
-              className={`main-nav-item ${page === "about" && "is--active"}`}
-            >
-              ABOUT
-            </Link>
-            <div className="dropdown-menu blog">
-              <Link href="/about" className="dropdown-nav-item">
-                Our Story
-              </Link>
-              <Link href="/about#get-in-touch" className="dropdown-nav-item">
-                Get in touch
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
       <div className={isMenuOpen ? "expanded-nav is--active" : "expanded-nav"}>
-        <Link
-          href="/seekers"
-          className={`expanded-nav-item ${page === "seekers" && "is--active"}`}
-        >
-          SEEKERS
-        </Link>
         <Link
           href="/providers"
           className={`expanded-nav-item ${
@@ -136,23 +110,38 @@ export default function Header({ page, scroll }) {
           PROVIDERS
         </Link>
         <Link
-          href="/blog"
-          className={`expanded-nav-item ${page === "blog" && "is--active"}`}
+          href="/seekers"
+          className={`expanded-nav-item ${page === "seekers" && "is--active"}`}
         >
-          BLOG
+          SEEKERS
         </Link>
+        {/* <Link
+          href="/news"
+          className={`expanded-nav-item ${page === "news" && "is--active"}`}
+        >
+          NEWS
+        </Link> */}
         <Link
-          href="/trust"
-          className={`expanded-nav-item ${page === "trust" && "is--active"}`}
+          href="/about"
+          className={`expanded-nav-item ${page === "about" && "is--active"}`}
         >
-          CM2 TRUST
+          ABOUT
         </Link>
-        <Link href="/about">
-          <a
-            className={`expanded-nav-item ${page === "about" && "is--active"}`}
-          >
-            ABOUT
-          </a>
+        <a
+          href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="expanded-nav-item"
+        >
+          SIGN IN
+        </a>
+        <Link
+          href="/providers/create-acccount"
+          className={`expanded-nav-item ${
+            page === "create-account" && "is--active"
+          }`}
+        >
+          CREATE ACCOUNT
         </Link>
       </div>
       <div className={scroll ? "scroll-line" : "scroll-line hidden"}>

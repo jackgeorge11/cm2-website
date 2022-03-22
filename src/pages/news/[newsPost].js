@@ -1,14 +1,10 @@
 import React from "react";
-// import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import PageWrapper from "../../assets/components/PageWrapper";
 import blogPosts from "../../assets/components/__BlogSeeds";
 import _Image from "../../assets/components/common/_Image";
 
 function BlogPostPage() {
-  // const router = useRouter();
-  // const slug = router.query;
-  // const post = blogPosts.find((post) => post.slug === slug.blogPost);
   const post = null
 
   const calculateReadingTime = (body) => {
@@ -35,7 +31,7 @@ function BlogPostPage() {
         />
         <link rel="icon" href="/icons/favicon.ico" />
       </Helmet>
-      <PageWrapper page="blog">
+      <PageWrapper page="news">
         <div className="blog-post">
           <div className="block">
             <div className="card-intro card-40">

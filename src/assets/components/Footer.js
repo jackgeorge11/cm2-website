@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function Footer() {
@@ -7,63 +7,52 @@ export default function Footer() {
     <div className="footer">
       <div className="footer-nav">
         <div className="footer-nav-section">
-          <Link href="/seekers" className="footer-main-nav">
-            SEEKERS
-          </Link>
-          <Link href="/seekers#our-app" className="footer-sub-nav">
-            Our App
-          </Link>
-          <Link
-            href="/seekers/featured-opportunities"
-            className="footer-sub-nav"
-          >
-            Featured Opportunities
-          </Link>
-        </div>
-        <div className="footer-nav-section">
           <Link href="/providers" className="footer-main-nav">
             PROVIDERS
           </Link>
+          <a
+            href="https://dev.d25wjfvzegfqfu.amplifyapp.com/dashboard"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-sub-nav"
+          >
+            Sign In
+          </a>
           <Link href="/providers/register" className="footer-sub-nav">
-            Register
-          </Link>
-          <Link href="/providers#how-it-works" className="footer-sub-nav">
-            How it Works
+            Create Account
           </Link>
         </div>
         <div className="footer-nav-section">
-          <Link href="/blog" className="footer-main-nav">
-            BLOG
+          <Link href="/seekers" className="footer-main-nav">
+            SEEKERS
           </Link>
-          <Link href="/blog#recent-stories" className="footer-sub-nav">
-            Recent Stories
+          <Link href="/seekers/download" className="footer-sub-nav">
+            Download Our App
           </Link>
-          <Link href="/blog/contribute" className="footer-sub-nav">
+        </div>
+        {/* <div className="footer-nav-section">
+          <Link href="/news" className="footer-main-nav">
+            NEWS
+          </Link>
+          <Link href="/news/contribute" className="footer-sub-nav">
             Contribute
           </Link>
-        </div>
-        <div className="footer-nav-section">
-          <Link href="/trust" className="footer-main-nav">
-            CM2 TRUST
-          </Link>
-          <Link href="/trust#our-projects" className="footer-sub-nav">
-            Our Projects
-          </Link>
-          <Link href="/trust#get-in-touch" className="footer-sub-nav">
-            Get In Touch
-          </Link>
-        </div>
+        </div> */}
         <div className="footer-nav-section">
           <Link href="/about" className="footer-main-nav">
             ABOUT
           </Link>
-          <Link href="/about" className="footer-sub-nav">
-            Our Story
-          </Link>
-          <Link href="/about#get-in-touch" className="footer-sub-nav">
-            Get in Touch
-          </Link>
         </div>
+        {/* <div className="footer-nav-section">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.facebook.com/ConnecMe2/"
+            className="footer-main-nav"
+          >
+            CM2 TRUST
+          </a>
+        </div> */}
       </div>
       <div className="footer-assets">
         <Link href="/" className="logo-link-wrapper">
@@ -119,6 +108,22 @@ export default function Footer() {
             <StaticImage src="../../images/icons/linkedin.png" />
           </a>
         </div>
+        <div className="legal-docs">
+          <Link href="/" className="hover-link">
+            Privacy
+          </Link>
+          {" | "}
+          <Link href="/" className="hover-link">
+            Cookies
+          </Link>
+          {" | "}
+          <Link href="/" className="hover-link">
+            Terms of Use
+          </Link>
+        </div>
+        <a href="mailto:hello@cm2.cok.uk" className="hover-link">
+          hello@cm2.co.uk
+        </a>
       </div>
     </div>
   );

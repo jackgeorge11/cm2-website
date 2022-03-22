@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet";
 import Cta from "../assets/components/common/Cta";
 import PageWrapper from "../assets/components/PageWrapper";
-import { StaticImage } from 'gatsby-plugin-image';
-import '../assets/styles/styles.scss';
+import { StaticImage } from "gatsby-plugin-image";
+import "../assets/styles/styles.scss";
 
 export default function Home() {
   return (
@@ -21,35 +21,33 @@ export default function Home() {
       <PageWrapper>
         <div className="home">
           <div className="block">
-            <div className="card-intro card-30">
+            <div className="card card-40">
               <h1>PUTTING THE RIGHT PEOPLE IN THE RIGHT SEATS</h1>
               <h2>
                 A social-vocational networking platform for those seeking
                 opportunities, and a revolutionary SaaS-based must-have for
                 those providing opportunities.
               </h2>
-              <Cta href={"/seekers"} className="">
-                discover opportunities
-              </Cta>
-              <Cta href={"/providers/register"} className="">
-                publish opportunities
-              </Cta>
-              <div className="bubble-intro" />
+              <div className="d-flex">
+                <Cta href={"/seekers"} className="">
+                  seekers
+                </Cta>
+                <Cta href={"/providers"} className="">
+                  providers
+                </Cta>
+              </div>
+
+              <div className="bubble" />
             </div>
             <StaticImage
               src="../images/our-app.png"
-              className="image-intro"
+              className="image-40"
               alt-="ConnecMe2: Collaborate with peers, discover opportunities, build your route map."
             />
           </div>
 
           <div className="block rev less-margin">
-            <StaticImage
-              src="../images/compass.png"
-              className="image-seekers"
-              hide={true}
-            />
-            <div className="card-seekers card-30">
+            <div className="card card-30">
               <h1>Seekers</h1>
               <h2>
                 For motivated individuals <span className="bold">seeking</span>{" "}
@@ -63,15 +61,20 @@ export default function Home() {
               <Cta href={"/seekers"} className="">
                 LEARN MORE
               </Cta>
-              <div className="bubble-seeker" />
+              <div className="bubble" />
             </div>
+            <StaticImage
+              src="../images/compass.png"
+              className="image-30"
+              hide={true}
+            />
           </div>
 
           <div className="block">
-            <div className="card-providers card-30">
+            <div className="card card-30">
               <h1>Providers</h1>
               <h2>
-                For companies and organisations {" "}
+                For companies and organisations{" "}
                 <span className="bold">providing</span> opportunities, our D2C
                 platform will revolutionize the way you:
               </h2>
@@ -83,18 +86,17 @@ export default function Home() {
               <Cta href={"/providers"} className="">
                 LEARN MORE
               </Cta>
-              <div className="bubble-provider" />
+              <div className="bubble" />
             </div>
             <StaticImage
               src="../images/oranges.png"
-              className="image-providers"
+              className="image-30"
               hide={true}
             />
           </div>
 
           <div className="block rev">
-            <StaticImage src="../images/basket.png" className="image-opportunity" hide={true}/>
-            <div className="card-opportunity card-50">
+            <div className="card card-40">
               <h1>OPPORTUNITY</h1>
               <h2 className="is-bold">It's that simple.</h2>
               <h2>
@@ -103,11 +105,22 @@ export default function Home() {
                 team members that fit your company’s culture -- it’s never been
                 easier.
               </h2>
-              <Cta href={"/seekers"} className="">
-                GET STARTED
-              </Cta>
-              <div className="bubble-opportunity" />
+              <div className="d-flex">
+                <Cta href={"/seekers"} className="">
+                  seekers
+                </Cta>
+                <Cta href={"/providers"} className="">
+                  providers
+                </Cta>
+              </div>
+
+              <div className="bubble" />
             </div>
+            <StaticImage
+              src="../images/basket.png"
+              className="image-40"
+              hide={true}
+            />
           </div>
         </div>
       </PageWrapper>

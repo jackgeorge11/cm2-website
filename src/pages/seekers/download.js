@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Helmet from "react-helmet";
 import PageWrapper from "../../assets/components/PageWrapper";
 import Spinner from "../../assets/components/Spinner";
+import "../../assets/styles/styles.scss";
 
 export default function Download() {
   const [submitted, setSubmitted] = useState(false);
@@ -139,7 +140,7 @@ export default function Download() {
                 <Spinner />
               ) : (
                 <>
-                  <h1>BECOME AN EARLY ADOPTER</h1>
+                  <h1>BECOME THE FIRST TO USE CONNECME2'S NEW APP</h1>
                   <h3>
                     The ConnecMe2 App will be available on Android and iOS in
                     Q2, 2022. In the meantime, why not become a{" "}
@@ -181,7 +182,7 @@ export default function Download() {
                     name="email"
                     placeholder="Enter your email"
                   />
-                  <label htmlFor="industry">I'm interested in...</label>
+                  {/* <label htmlFor="industry">I'm interested in...</label>
                   <div className="interests">
                     {sectors.map((sector) => {
                       return (
@@ -195,7 +196,7 @@ export default function Download() {
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
 
                   <div className="agree">
                     <input
@@ -232,7 +233,7 @@ export default function Download() {
                   {loading ? (
                     <Spinner />
                   ) : (
-                    <button onClick={handleSubmit}>Create Account</button>
+                    <button onClick={handleSubmit}>Become a Beta Tester</button>
                   )}
                 </form>
               )}
@@ -273,7 +274,7 @@ export default function Download() {
                 </div>
               </div>
               <div className="image-wrapper">
-                <StaticImage src="../../images/people-on-phone.jpg" />
+                <StaticImage src="../../images/beta-tester.jpg" />
                 <div className="overlay" />
                 <h3>
                   ConnecMe2: Revolutionising recruitment and building stronger

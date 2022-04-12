@@ -6,6 +6,8 @@ import { Link } from "gatsby";
 import Cta from "../../assets/components/common/Cta";
 import blogPosts from "../../assets/components/__BlogSeeds";
 import { StaticImage } from "gatsby-plugin-image";
+import "../../assets/styles/styles.scss";
+import "../../assets/styles/styles.scss";
 
 function index() {
   return (
@@ -33,11 +35,12 @@ function index() {
                 from the ConnecMe2 community.
               </h2>
               <h2>
-                Plus, discover information regarding all of ConnecMe2's updates and milestones!
+                Plus, discover information regarding all of ConnecMe2's updates
+                and milestones!
               </h2>
               <h2>Interested in blogging with ConnecMe2?</h2>
               <Cta href="/news/contribute">contribute</Cta>
-              <div className="bubble"/>
+              <div className="bubble" />
             </div>
             <StaticImage
               src="../../images/people-blog.png"

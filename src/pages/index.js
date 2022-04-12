@@ -22,19 +22,15 @@ export default function Home() {
         <div className="home">
           <div className="block">
             <div className="card card-40">
-              <h1>PUTTING THE RIGHT PEOPLE IN THE RIGHT SEATS</h1>
+              <h1>profiling human talent</h1>
               <h2>
-                A social-vocational networking platform for those seeking
-                opportunities, and a revolutionary SaaS-based must-have for
-                those providing opportunities.
+                Welcome to ConnecMe2, a social-vocational networking platform
+                for those seeking opportunities, and a revolutionary SaaS-based
+                must-have for those providing opportunities.
               </h2>
               <div className="d-flex">
-                <Cta href={"/seekers"} className="">
-                  seekers
-                </Cta>
-                <Cta href={"/providers"} className="">
-                  providers
-                </Cta>
+                <Cta href="/seekers">seekers</Cta>
+                <Cta href="/providers">providers</Cta>
               </div>
 
               <div className="bubble" />
@@ -50,17 +46,22 @@ export default function Home() {
             <div className="card card-30">
               <h1>Seekers</h1>
               <h2>
-                For motivated individuals <span className="bold">seeking</span>{" "}
-                opportunities, download the ConnecMe2 app to:
+                Dedicated to serve the motivated individuals seeking
+                opportunities, we have created a mobile app that combines the
+                beauty of video and dynamic user generated content, with the
+                ability to create what some have called a virtual CV and
+                portfolio you can share with the leaders, experts and decision
+                makers within your circle. The ConnecMe2 app makes it easy to:
               </h2>
               <ul>
                 <li>Collaborate with peers</li>
                 <li>Discover opportunities</li>
-                <li>Build your route map</li>
+                <li>
+                  And build your route map that showcases your talent and latest
+                  milestones
+                </li>
               </ul>
-              <Cta href={"/seekers"} className="">
-                LEARN MORE
-              </Cta>
+              <Cta href="/seekers">LEARN MORE</Cta>
               <div className="bubble" />
             </div>
             <StaticImage
@@ -74,18 +75,24 @@ export default function Home() {
             <div className="card card-30">
               <h1>Providers</h1>
               <h2>
-                For companies and organisations{" "}
-                <span className="bold">providing</span> opportunities, our D2C
-                platform will revolutionize the way you:
+                For companies and organisations providing opportunities,
+                launching campaigns and seeking diverse talent our SaaS based
+                platform promises to revolutionise the approach to maximising
+                human potential and talent, locally and internationally.
+              </h2>
+              <h2>
+                With the help of our web portal and your customisable dashboard,
+                you will be able to:
               </h2>
               <ul>
-                <li>Discover diversity</li>
-                <li>Recruit top talent</li>
-                <li>Build your community</li>
+                <li>Discover and recruit from an incredible pool of talent</li>
+                <li>Build your community of engaged followers</li>
+                <li>
+                  Interact and amplify your brand among a network of influential
+                  and loyal users.
+                </li>
               </ul>
-              <Cta href={"/providers"} className="">
-                LEARN MORE
-              </Cta>
+              <Cta href="/providers">LEARN MORE</Cta>
               <div className="bubble" />
             </div>
             <StaticImage
@@ -97,21 +104,20 @@ export default function Home() {
 
           <div className="block rev">
             <div className="card card-40">
-              <h1>OPPORTUNITY</h1>
-              <h2 className="is-bold">It's that simple.</h2>
+              <h1>Opportunities like no other</h1>
               <h2>
-                Finding your next job and networking with like-minded
-                professionals, connecting with diverse talent and onboarding
-                team members that fit your company’s culture -- it’s never been
-                easier.
+                At ConnecMe2 we are excited about how our platform will change
+                how opportunities are found, shared and created. By creating a
+                playground where both providers and seekers will benefit from
+                having access to shareable moments of authentic experiences - we
+                look forward to seeing how organisations will onboard teams and
+                begin their journey to enhancing company culture; whilst our
+                seekers take a step closer to reaching their vocational
+                destination.
               </h2>
               <div className="d-flex">
-                <Cta href={"/seekers"} className="">
-                  seekers
-                </Cta>
-                <Cta href={"/providers"} className="">
-                  providers
-                </Cta>
+                <Cta href="/seekers">seekers</Cta>
+                <Cta href="/providers">providers</Cta>
               </div>
 
               <div className="bubble" />

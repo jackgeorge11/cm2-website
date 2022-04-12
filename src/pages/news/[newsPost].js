@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import PageWrapper from "../../assets/components/PageWrapper";
 import blogPosts from "../../assets/components/__BlogSeeds";
 import _Image from "../../assets/components/common/_Image";
+import "../../assets/styles/styles.scss";
 
 function BlogPostPage() {
   const post = null

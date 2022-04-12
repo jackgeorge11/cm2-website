@@ -6,6 +6,7 @@ import PageWrapper from "../../../assets/components/PageWrapper";
 import {StaticImage} from "gatsby-plugin-image";
 import Spinner from "../../../assets/components/Spinner";
 import axios from "axios";
+import "../../../assets/styles/styles.scss";
 
 export default function SkyForm() {
   const [formData, setFormData] = useState({

@@ -56,37 +56,45 @@ export default function Header({ page, scroll }) {
                 ABOUT
               </Link>
             </div>
-            {/* <div className="dropdown">
-              <a
+            <div className="dropdown">
+              {/* <a
                 href="https://cm2.co.uk"
                 target="_blank"
                 rel="noreferrer"
                 className="main-nav-item"
               >
                 CM2 TRUST
-              </a>
-            </div> */}
-          </div>
-          <div className="nav-right">
-            <div className="dropdown">
-              <a
-                href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="main-nav-item"
+              </a> */}
+              <Link
+                href="/trust"
+                className={`main-nav-item ${page === "trust" && "is--active"}`}
               >
-                SIGN IN
-              </a>
-            </div>
-            <div className="dropdown">
-              <Cta
-                href="/providers/create-account"
-                className={`${page === "blog" && "is--active"}`}
-              >
-                Create account
-              </Cta>
+                TRUST
+              </Link>
             </div>
           </div>
+          {page !== "seekers" && (
+            <div className="nav-right">
+              <div className="dropdown">
+                <a
+                  href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="main-nav-item"
+                >
+                  SIGN IN
+                </a>
+              </div>
+              <div className="dropdown">
+                <Cta
+                  href="/providers/create-account"
+                  className={`${page === "blog" && "is--active"}`}
+                >
+                  Create account
+                </Cta>
+              </div>
+            </div>
+          )}
           <button
             className={`hamburger hamburger--spin ${
               isHamburgerActive && "is-active"
@@ -127,22 +135,32 @@ export default function Header({ page, scroll }) {
         >
           ABOUT
         </Link>
-        <a
-          href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="expanded-nav-item"
-        >
-          SIGN IN
-        </a>
         <Link
-          href="/providers/create-acccount"
-          className={`expanded-nav-item ${
-            page === "create-account" && "is--active"
-          }`}
+          href="/trust"
+          className={`expanded-nav-item ${page === "trust" && "is--active"}`}
         >
-          CREATE ACCOUNT
+          TRUST
         </Link>
+        {page !== "seekers" && (
+          <>
+            <a
+              href="https://dev.d25wjfvzegfqfu.amplifyapp.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="expanded-nav-item"
+            >
+              SIGN IN
+            </a>
+            <Link
+              href="/providers/create-account"
+              className={`expanded-nav-item ${
+                page === "create-account" && "is--active"
+              }`}
+            >
+              CREATE ACCOUNT
+            </Link>
+          </>
+        )}
       </div>
       <div className={scroll ? "scroll-line" : "scroll-line hidden"}>
         <svg

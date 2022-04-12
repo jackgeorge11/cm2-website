@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import PageWrapper from "../../assets/components/PageWrapper";
-import BetaForm from "../../assets/components/BetaForm";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "../../assets/components/common/Cta";
+import "../../assets/styles/styles.scss";
 
 export default function index() {
   return (
@@ -23,20 +23,13 @@ export default function index() {
             <div className="card card-40">
               <h1>Our Story</h1>
               <h2>
-                What started as an on-the-ground people focused social
-                enterprise, dedicated towards connecting young individuals with
-                limited access to apprenticeships, training and professional
-                opportunities across a number of industries evolved into a tech
-                platform perfectly suited to solve society’s widening skill gap.
-              </h2>
-              <h2>
-                At ConnecMe2 our mission is simple, we want to empower the next
-                generation to curate their pathways to success. Quote:
-                “ConnecMe2 was born out of a passion for building an inclusive
-                and cohesive community which enables decision makers to discover
-                and champion our young seekers that are digitally savvy,
-                inventive and in many scenarios overqualified for the roles they
-                find themselves in.”
+                Founded on a shared vision to change the landscape of providing
+                vocational opportunities to a wider segment of society.
+                ConnecMe2 is a data driven app that seeks to empower the next
+                generation of talent by providing them with a transparent
+                network where they can create their own pathways to vocational
+                opportunities in partnership with some of the most exciting
+                brands, influencers and organisations.
               </h2>
               <h2>
                 Want to learn more about how we started? Checkout the ConnecMe2
@@ -44,9 +37,7 @@ export default function index() {
               </h2>
               <div className="bubble" />
               <div className="d-flex">
-                <Cta href="https://cm2.co.uk" external={true}>
-                  CM2 Trust
-                </Cta>
+                <Cta href="/trust">CM2 Trust</Cta>
               </div>
               {/* <BetaForm
                 description="Want to join our ever-growing community? Sign up to become a beta user of our app and get early access to opportunities."
@@ -61,22 +52,25 @@ export default function index() {
           </div>
           <div className="block rev">
             <div className="card card-40">
-              <h1>Generational Impact</h1>
+              <h1>creating authentic experiences</h1>
               <h2>
-                At ConnecMe2™ we believe that we are on the cusp of a
-                generational shift which will be propelled by tech and data. At
-                the helm will be the Gen Z generation and the brands and
-                organisations that are willing to listen and champion the voices
-                of those that are given access and opportunity to design their
-                own paths.
-              </h2>
-              <h2>
-                With the help of our early adopters and our seekers, we are
-                excited to launch an app that serves the needs of both
-                communities.
+                A global platform bringing vocational insight to both our
+                Providers and Seekers. ConnecMe2 takes user generated data from
+                every one of our active users, giving voice and exposure to our
+                community. As we learn more about our network of providers and
+                seekers, we will introduce, AI, behavioural tracking and
+                segmentation to enhance and personalise each and every dedicated
+                user’s experience within our platform. ConnecMe2 combines the
+                power of video, live interactions and the ability to share,
+                curate and create experiences to optimise the Seeker’s
+                performance. Our platform seeks to deliver actionable and
+                beneficial insights exclusively for our providers and seekers.
               </h2>
               <div className="bubble" />
-              <Cta href="/seekers">Seekers</Cta>
+              <div className="d-flex">
+                <Cta href="/seekers">seekers</Cta>
+                <Cta href="/providers">providers</Cta>
+              </div>
             </div>
             <StaticImage
               src="../../images/basket.png"
@@ -96,8 +90,9 @@ export default function index() {
                 </a>
                 .
               </h2>
-              <h2>Or fill our contact form.</h2>
-              <Cta href="/contact">Contact</Cta>
+              <Cta href="mailto:hello@cm2.co.uk" external={true}>
+                Contact
+              </Cta>
               <div className="bubble"></div>
             </div>
             <StaticImage

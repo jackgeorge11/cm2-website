@@ -5,6 +5,8 @@ import RadioButton from "../../assets/components/common/RadioButton";
 import InlineLink from "../../assets/components/common/InlineLink";
 import { StaticImage } from "gatsby-plugin-image";
 import Spinner from "../../assets/components/Spinner";
+import "../../assets/styles/styles.scss";
+
 
 function Contribute() {
   const [submitted, setSubmitted] = useState(false);

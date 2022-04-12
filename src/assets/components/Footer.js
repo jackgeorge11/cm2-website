@@ -18,7 +18,7 @@ export default function Footer() {
           >
             Sign In
           </a>
-          <Link href="/providers/register" className="footer-sub-nav">
+          <Link href="/providers/create-account" className="footer-sub-nav">
             Create Account
           </Link>
         </div>
@@ -41,6 +41,11 @@ export default function Footer() {
         <div className="footer-nav-section">
           <Link href="/about" className="footer-main-nav">
             ABOUT
+          </Link>
+        </div>
+        <div className="footer-nav-section">
+          <Link href="/trust" className="footer-main-nav">
+            TRUST
           </Link>
         </div>
         {/* <div className="footer-nav-section">
@@ -109,19 +114,34 @@ export default function Footer() {
           </a>
         </div>
         <div className="legal-docs">
-          <Link href="/" className="hover-link">
+          <a
+            href="/cm2-website-privacy-policy.pdf"
+            className="hover-link"
+            target="_blank"
+            rel="noreferrer"
+          >
             Privacy
-          </Link>
+          </a>
           {" | "}
-          <Link href="/" className="hover-link">
+          <a
+            href="/cm2-cookie-policy.pdf"
+            className="hover-link"
+            target="_blank"
+            rel="noreferrer"
+          >
             Cookies
-          </Link>
+          </a>
           {" | "}
-          <Link href="/" className="hover-link">
+          <a
+            href="/cm2-website-terms-of-use.pdf"
+            className="hover-link"
+            target="_blank"
+            rel="noreferrer"
+          >
             Terms of Use
-          </Link>
+          </a>
         </div>
-        <a href="mailto:hello@cm2.cok.uk" className="hover-link">
+        <a href="mailto:hello@cm2.co.uk" className="hover-link">
           hello@cm2.co.uk
         </a>
       </div>
